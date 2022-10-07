@@ -25,17 +25,17 @@
 !!! note ""
     Once you know if a person is a DAPNET subscriber, you can go to [RadioID.Net](https://radioid.net) and use the online database search to get their DMR ID. And of course, you can always ask the person you want to page for their DMR ID.
 
-### What if they don't have a DMR ID?
+## What if they don't have a DMR ID?
 
 !!! note ""
     Then you are not able to use this system to page them. Sorry. There is nothing I can do about that.
 
-### How do I know if the page went through?
+## How do I know if the page went through?
 
 !!! note ""
     Just like in the old days, the only way you know it went through and if they got it is if they call you back. You just have to cross your fingers and hope for the best.
 
-### What happens if I try to page someone who is not a DAPNET subscriber?
+## What happens if I try to page someone who is not a DAPNET subscriber?
 
 !!! note ""
     Absolutly nothing. No message will go through to anyone. As the old saying goes, it will just drift in CyberSpace for all eternity. Unfortunatly, just like the old days, there will also be no prompt on the phone either. You just have to cross your fingers and hope for the best.
