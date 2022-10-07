@@ -1,0 +1,6 @@
+pandas
+sqlalchemy
+datetime
+tzlocal
+requests
+mysql-connector-python

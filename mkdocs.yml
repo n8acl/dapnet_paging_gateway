@@ -1,0 +1,44 @@
+site_name: DAPNET Paging Wiki
+site_url: https://n8acl.github.io/dapnet_paging_gateway
+repo_url: https://github.com/n8acl/dapnet_paging_gateway
+theme:
+  name: 'material'
+  font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: light
+      primary: 'amber'
+      accent: 'orange'
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Embrace the dark side
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: 'deep orange'
+      accent: 'amber'
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - def_list
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
+nav:
+  - Welcome!: index.md
+  - Installation: 
+    - Installation/Setup: Installation.md
+    - Configure MySQL Database: configure_mysql.md
+    - Configure Scripts: configure_scripts.md
+    - Configure FreePBX/Asterisk: configure_freepbx.md
+  - Using the Gateway: using_the_gateway.md
+  - Frequently Asked Questions: faq.md
+  - Change Log: changelog.md
+
+
