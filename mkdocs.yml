@@ -1,4 +1,4 @@
-site_name: DAPNET Paging Wiki
+site_name: DAPNET Paging Gateway Wiki
 site_url: https://n8acl.github.io/dapnet_paging_gateway
 repo_url: https://github.com/n8acl/dapnet_paging_gateway
 theme:
@@ -21,6 +21,8 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+  features:
+    - navigation.sections
 
 markdown_extensions:
   - admonition
