@@ -31,7 +31,7 @@ cd dapnet_paging_gateway
 
 cp /scripts/* /var/lib/asterisk/scripts/dapnet/*
 
-cp /sounds/* /var/lib/asterisk/sounds/custom/dapnet_gateway/*
+cp /sounds/dapnet_gateway/* /var/lib/asterisk/sounds/custom/dapnet_gateway/*
 ```
 
 Verify your work.
