@@ -1,4 +1,5 @@
-# dapnet_paging_gateway
+# DAPNET Paging Gateway
+
 An old style paging gateway for DAPNET for use with FreePBX/Asterisk
 
 Remember the days of calling a pager number, entering your callback number or leaving a voicemail and that message being sent to the end user? Well those days are kind of back... at least for Hams. This is what the kids are calling "Retro-tech" today.
