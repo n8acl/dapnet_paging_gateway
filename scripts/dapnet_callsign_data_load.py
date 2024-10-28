@@ -78,7 +78,7 @@ sql = "create table dapnet_data (callsign text);"
 
 exec_sql(conn,sql)
 
-dapnet_callsign_data = requests.get(dapnet_url, auth=HTTPBasicAuth("n8acl","Xyke8c11qD6I9vTpz63U")).json() 
+dapnet_callsign_data = requests.get(dapnet_url, auth=HTTPBasicAuth(<your-username>,<your_password>)).json() 
 
 for i in range(0,len(dapnet_callsign_data)):
     sql = "insert into dapnet_data(callsign) "
