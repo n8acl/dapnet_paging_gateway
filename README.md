@@ -1,5 +1,9 @@
 # DAPNET Paging Gateway
 
+**NOTE**: I have set this as a public archive as I no longer maintain the project. I am no longer running a PBX and do not plan on further developing this project. If that changes in the future, I will un-archive it. Please feel free to fork this and use it as a basis for your own projects.
+
+---
+
 An old style paging gateway for DAPNET for use with FreePBX/Asterisk
 
 Remember the days of calling a pager number, entering your callback number or leaving a voicemail and that message being sent to the end user? Well those days are kind of back... at least for Hams. This is what the kids are calling "Retro-tech" today.
