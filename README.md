@@ -1,6 +1,6 @@
 # DAPNET Paging Gateway
 
-**NOTE**: I have set this as a public archive as I no longer maintain the project. I am no longer running a PBX and do not plan on further developing this project. If that changes in the future, I will un-archive it. Please feel free to fork this and use it as a basis for your own projects.
+**NOTE**: I have unarchived this to fix somethings in the scripts. While I still am not running a PBX, I can fix the Python scripts and need to include the SQL script. Updates soon.
 
 ---
 
