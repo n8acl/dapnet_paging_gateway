@@ -35,7 +35,7 @@ You should also:
 The DAPNET Paging Gateway is made up of multiple parts, but only a few are needed to run:
 
 * ```dapnet_callsign_data_load.py``` - This script loads the needed callsign data from DAPNET and RadioID.net. You can run this on your FreePBX instance if you would like, but it will would be better to run it on a seperate machine from the PBX.
-* ```dapent_paging_gateway.py``` - This is the script that is called by FreePBX/Asterisk to send the message to DAPNET. This script supports use on both a Single user PBX (IE a personal at home PBX) and a Multi-User PBX (like one hosted in the cloud for multiple users to acccess like one of the Ham Radio VOIP Services.)
+* ```dapent_paging_gateway.py``` - This is the script that is called by FreePBX/Asterisk to send the message to DAPNET. This script supports use on both a Single user PBX (IE a personal at home PBX) and a Multi-User PBX (like one hosted in the cloud for multiple users to access like one of the Ham Radio VOIP Services.)
 
 ## Disclaimer
 
@@ -53,7 +53,6 @@ I did want to say thanks to the people who, behind the scenes, helped me with re
 
 If you have questions, please feel free to reach out to me. You can reach me in one of the following ways:
 
-* Twitter: @n8acl
 * Discord: Ravendos#7364
 * Mastodon: @n8acl@mastodon.radio
 * E-mail: n8acl@qsl.net
