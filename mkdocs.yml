@@ -37,7 +37,7 @@ nav:
   - Installation: 
     - Installation/Setup: Installation.md
     - Configure Scripts: configure_scripts.md
-    - Configure MySQL Database: configure_database.md
+    - Configure Database: configure_database.md
     - Configure FreePBX/Asterisk: configure_freepbx.md
   - Using the Gateway: using_the_gateway.md
   - Frequently Asked Questions: faq.md
