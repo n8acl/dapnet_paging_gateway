@@ -1,76 +1,55 @@
 # Configure the Scripts
 
-Once you have your all the credentials you need, have cloned the repo and installed everything, you can now start configuring the scripts. 
+Once you have your all the credentials you need, have cloned the repo and installed all the libraries, you now need to configuring the scripts. 
 
-## Configure DAPNET.json
+## Configure config.json
 
-First, open the ```dapnet.json``` file in the editor of your choice.
+First, open the ```config.json``` file in the editor of your choice.
 
 In this file you will see the following:
 
 ```json
 {
-    "my_creds": 
-         {
-             "username": "DAPNET USERNAME HERE",
-             "password": "DAPNET PASSWORD HERE",
-             "tx_group": "all"
-         }
- }
+    "dapnet": {
+        "username": "DAPNET USER NAME",
+        "password": "DAPNET PASSWORD",
+        "tx_group": "all"
+    },
+    "database": {
+        "rdbms_type": "DB SERVER TYPE",
+        "credentials": {
+            "username": "DB SERVER USERNAME",
+            "password": "DB SERVER PASSWORD",
+            "host": "FQDN or IP ADDRESS OF DB INSTANCE",
+            "db": "DAPNET"
+        }
+    },
+    "gateway_mode": 1
+}
 ```
 
-Put your DAPNET Username and Passwords into the correct fields and save the file and close it.
+***Settings Definitions***:
+* ```dapnet``` - This section is your DAPNET Credentials
+    * ```username```: This is your DAPNET Username, usually your callsign.
+    * ```password```: This is your DAPNET Password.
+    * ```tx_group```: This is the DAPNET tx_group to send the messages to. This is usually a regional setting. You will need to look this up on DAPNET to find out where the best place to send the messages is. Try to avoid the ```all``` group to keep from hitting every transmitter connected to DAPNET.
+* ```database``` - This section is your Database Server credentials.
+    * ```rdbms_type```: This is the type of Database Server you are using. 
+        * Supported Types
+            * ```mssql``` - MS SQL Server
+            * ```mysql``` - MySQL/MariaDB
+            * ```postgresql``` - PostgreSQL
+            * ```sqlite``` - SQLite (built in Python DB)
+    * ```credentials```: These are the credentials for your DB Instance
+        * ```username```: Database Username
+        * ```password```: Database Password
+        * ```host```: FQDN or IP address of your Database Instance
+        * ```db```: Always needs to be DAPNET - ***DO NOT CHANGE THIS***. If you change this, it will break things.
+* ```gateway_mode```: This is the mode that the gateway should work in. This defines whether it is in Single-User (personal) or Multi-User (many users like a Cloud PBX) mode.
+    * ```1```: Single-User Mode
+    * ```2```: Multi-User Mode
 
-## Configure dapnet_callsign_data_load.py
-
-Next, open the ```dapnet_callsign_data_load.py``` file in the editor of your choice. Scroll down till you find a section like so:
-
-```python
-#############################
-##### Define Variables
-
-# define mysql connection variables
-mysql_host = 'MYSQL HOST IP ADDRESS'
-mysql_user = 'MYSQL USERNAME'
-mysql_password = 'MYSQL PASSWORD'
-```
-
-Enter the MySQL IP Address, Username and password as asked in the appropriate places. Do NOT change anything below the line marked:
-
-```python
-#############################
-##### DO NOT CHANGE BELOW
-```
-
-If you do, you will break your script. Remember the Disclaimer on the front page of the Wiki.
-
-## Configure dapnet_paging_gateway_*.py
-
-Next, open one of the paging gateway scripts files in the editor of your choice. 
-
-* If you want to set this up for just yourself, use ```dapnet_paging_gateway_su.py```
-* If you want to set this up for multiple people, use ```dapnet_paging_gateway_mu.py```
-
-Scroll down till you find a section like so:
-
-```python
-#############################
-##### Define Variables
-
-# define mysql connection variables
-mysql_host = 'MYSQL HOST IP ADDRESS'
-mysql_user = 'MYSQL USERNAME'
-mysql_password = 'MYSQL PASSWORD'
-```
-
-Just like with the callsign data loader, enter the MySQL IP Address, Username and password as asked in the appropriate places. Do NOT change anything below the line marked:
-
-```python
-#############################
-##### DO NOT CHANGE BELOW
-```
-
-If you do, you will break your script. Remember the Disclaimer on the front page of the Wiki.
+Make your settings changes and then save the file.
 
 ## Set Callsign Data load for automatic loading
 
@@ -96,4 +75,4 @@ Because this can take a while to run, I would suggest setting up a cron job to r
 
 This will fire my script every day at 2:00 am and do the data load then.
 
-Next we need to configure FreePBX/Asterisk.
+Next we need to [configure the Database](https://n8acl.github.io/dapnet_paging_gateway/configure_database/).

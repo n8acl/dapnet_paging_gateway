@@ -1,6 +1,6 @@
 # Configure FreePBX/Asterisk
 
-Now that we have the scripts configured and the database built, the last step before we can run anything is to configure FreePBX and Asterisk.
+Now that we have the scripts configured and the database built, the last step before we are done is to configure FreePBX and Asterisk.
 
 Note that you should already have a FreePBX/Asterisk instance installed and configured. That is outside the scope of this document/project. There are plenty of guides online to help you do that.
 
@@ -29,48 +29,18 @@ mkdir /var/lib/asterisk/sounds/custom/dapnet_gateway
 
 cd dapnet_paging_gateway
 
-cp /scripts/* /var/lib/asterisk/scripts/dapnet/*
+cp -R /scripts/* /var/lib/asterisk/scripts/dapnet/*
 
 cp /sounds/dapnet_gateway/* /var/lib/asterisk/sounds/custom/dapnet_gateway/*
 ```
 
-Verify your work.
+Verify your work. Make sure all the scripts are in the Asterisk dapnet Scripts folder and that there is a directory called src with 4 scripts in it in the dapnet folder and the sounds are in the sounds folder and the 
 
 ## Modify the extensions_custom.conf
 
 Next, we need to modify the ```extensions_custom.conf``` file. Open that in your editor.
 
-Next copy one of the following stanzas into that file:
-
-If you are using the Single User script use:
-
-```bash
-
-;# // BEGIN DAPNET
-exten => 327638,1,Answer
-exten => 327638,n,Wait(1)
-exten => 327638,n,Set(TIMEOUT(digit)=8)
-exten => 327638,n,Set(TIMEOUT(response)=10)
-exten => 327638,n,Set(VOLUME(TX)=10)
-exten => 327638,n,Playback(/var/lib/asterisk/sounds/custom/dapnet_gateway/dpg_welcome)
-exten => 327638,n,Wait(1)
-exten => 327638,n,Playback(/var/lib/asterisk/sounds/custom/dapnet_gateway/dpg_enter_dmrid)
-exten => 327638,n,Set(VOLUME(TX)=0)
-exten => 327638,n,Read(RIC,beep,8)
-exten => 327638,n,Set(VOLUME(TX)=10)
-exten => 327638,n,Playback(/var/lib/asterisk/sounds/custom/dapnet_gateway/dpg_enter_callback)
-exten => 327638,n,Set(VOLUME(TX)=0)
-exten => 327638,n,Read(CALLBACK,beep,12)
-exten => 327638,n,System(python3 /var/lib/asterisk/scripts/dapnet/dapnet_paging_gateway.py ${RIC} ${CALLBACK})
-exten => 327638,n,Set(VOLUME(TX)=10)
-exten => 327638,n,Playback(/var/lib/asterisk/sounds/custom/dapnet_gateway/dpg_thank_you)
-exten => 327638,n,Wait(1)
-exten => 327638,n,Hangup
-;# // END DAPNET
-
-```
-
-If you are using the Multi User Script, use:
+Next copy the following stanza into that file:
 
 ```bash
 ;# // BEGIN DAPNET
@@ -112,4 +82,4 @@ Now we need to tell FreePBX about this new extension. It will not pick it up aut
 * Click ```Submit```
 * Click ```Apply Changes```
 
-Almost there. Now we can finally run everything.
+That should do it. Now we should be able to [send a page to a user](https://n8acl.github.io/dapnet_paging_gateway/using_the_gateway/).

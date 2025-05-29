@@ -9,7 +9,7 @@ If you want to run this on a Windows or Mac machine, you will need to be able to
 You will need a few things to be able to configure the scripts.
 
 * Your DAPNET Username and Password
-* The Username, Password and IP Address of your MySQL Instance
+* The Username, Password and IP Address of your Database Server Instance
 
 ## Obtaining DAPNET Keys
 
@@ -39,4 +39,4 @@ pip3 install -r requirements.txt
 
 If you are going to run the callsign loader script on another computer, you will need to move that script and the ```requirements.txt``` file to that machine and install the requirements there as well.
 
-Now let's setup the MySQL Database first.
+First let's setup the[```config.json``` file](https://n8acl.github.io/dapnet_paging_gateway/configure_scripts/). You will need this to be able to configure and use your system.

@@ -1,0 +1,17 @@
+{
+    "dapnet": {
+        "username": "DAPNET USER NAME",
+        "password": "DAPNET PASSWORD",
+        "tx_group": "all"
+    },
+    "database": {
+        "rdbms_type": "DB SERVER TYPE",
+        "credentials": {
+            "username": "DB SERVER USERNAME",
+            "password": "DB SERVER PASSWORD",
+            "host": "FQDN or IP ADDRESS OF DB INSTANCE",
+            "db": "DAPNET"
+        }
+    },
+    "gateway_mode": 1
+}

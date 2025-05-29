@@ -16,7 +16,7 @@
     Yeah. This is a tricky question as there really is no straight answer. There are some ways to do this:
 
       * First off, the easiest way is to ask the person you are wanting to send pages to.
-      * If you are a DAPNET Subscriber yourself, you can login to the DAPNET website and do a search for the person. If they come up, they are a subscriber. However, they need to have everything setup and configured for it to go through.
+      * If you are a DAPNET Subscriber yourself, you can login to the DAPNET website and do a search for the person. If they come up, they are a subscriber. However, they need to have everything setup and configured for the message to go through.
 
     Otherwise, there really isn't a straight forward way
 

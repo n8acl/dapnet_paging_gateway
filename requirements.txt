@@ -1,6 +1,9 @@
 pandas
 sqlalchemy
+sqlalchemy-utils
 datetime
 tzlocal
 requests
-mysql-connector-python
+pymssql
+pymysql
+psycopg2-binary

@@ -16,7 +16,12 @@ This software is for use by Amateur Radio Operators Only.
 
 In order to use these scripts, you will need to have the following setup and configured:
 
-* A MySQL Database server instance (seperate from the FreePBX database) 
+* A Database server instance (seperate from the FreePBX database).
+    * Supported Databases
+        * MS SQL Server
+        * MySQL/MariaDB
+        * PostgreSQL
+        * SQLite
 * A FreePBX server instance
 
 You should also:
@@ -30,15 +35,13 @@ You should also:
 The DAPNET Paging Gateway is made up of multiple parts, but only a few are needed to run:
 
 * ```dapnet_callsign_data_load.py``` - This script loads the needed callsign data from DAPNET and RadioID.net. You can run this on your FreePBX instance if you would like, but it will would be better to run it on a seperate machine from the PBX.
-* There are also two options for running the script:
-    * If you are just using this for yourself on your own FreePBX system, you should use ```dapnet_paging_gateway_su.py``` ("su" stands for Single User)
-    * If you are using this on a group PBX (like a club PBX for example or there are multiple hams in your home that will use this), you should use ```dapnet_paging_gateway_mu.py``` ("mu" stands for Multi-User). The MU version does take a bit more to setup.
+* ```dapent_paging_gateway.py``` - This is the script that is called by FreePBX/Asterisk to send the message to DAPNET. This script supports use on both a Single user PBX (IE a personal at home PBX) and a Multi-User PBX (like one hosted in the cloud for multiple users to acccess like one of the Ham Radio VOIP Services.)
 
 ## Disclaimer
 
 Know that you modify your FreePBX installation at your own risk. Make sure you make backups and everything before you start. 
 
-This install is not for the faint of heart. This script is a bit of an involved install and if you are not comfortable with working in MySQL or making changes to your FreePBX/Asterisk System, you can break things badly.
+This install is not for the faint of heart. This script is a bit of an involved install and if you are not comfortable with working in SQLc or making changes to your FreePBX/Asterisk System, you can break things badly.
 
 You have been thusly warned.
 
